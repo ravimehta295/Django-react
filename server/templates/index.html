@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+
+	<head>
+		
+	</head>
+	<body>
+		
+		<div id="root"></div>
+
+		<script>
+			window.userData = JSON.parse('{{user_data|escapejs}}');
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="{% static "bundle.css" %}">
+		<script type="text/javascript" src="{% static "bundle.js" %}"></script>
+	</body>
+</html>

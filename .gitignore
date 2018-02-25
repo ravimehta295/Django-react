@@ -1,0 +1,7 @@
+./server/env
+client/dist
+client/node_modules
+.DS_Store
+db.sqlite3
+env
+__pycache__
