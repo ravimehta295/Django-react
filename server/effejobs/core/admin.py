@@ -5,7 +5,8 @@ from . import models
 # Register your models here.
 
 class OrganisationAdmin(admin.ModelAdmin):
-	pass
+    pass
 
 
 admin.site.register(models.Organisation, OrganisationAdmin)
+admin.site.register(models.JobPosting)
