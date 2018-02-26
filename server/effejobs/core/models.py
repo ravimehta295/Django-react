@@ -15,10 +15,10 @@ class JobPosting(models.Model):
         Organisation,
         on_delete=models.CASCADE
     )
-    salary_range = models.CharField(max_length=100)
-    time_in_month = models.IntegerField()
-    prerequisites_skills = models.CharField(max_length=1000)
-    details = models.CharField(max_length=1000)
-    experience_min = models.IntegerField()
-    experience_max = models.IntegerField()
-    education = models.CharField(max_length=100)
+    salary_range = models.CharField(max_length=100, null=True, blank=True)
+    time_in_month = models.IntegerField(null=True, blank=True)
+    prerequisites_skills = models.CharField(max_length=1000, null=True, blank=True)
+    details = models.CharField(max_length=1000, null=True, blank=True)
+    experience_min = models.IntegerField(null=True, blank=True)
+    experience_max = models.IntegerField(null=True, blank=True)
+    education = models.CharField(max_length=100, null=True, blank=True)

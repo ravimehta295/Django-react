@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import './sass/main.scss';
 
 // import components
-import Home from './Home';
-import Search from './Search';
+import Home from './home';
+import Search from './search';
 
 import {
   BrowserRouter as Router,

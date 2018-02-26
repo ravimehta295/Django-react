@@ -1,3 +1,8 @@
 from django.test import TestCase
+from  .models import JobPosting
 
-# Create your tests here.
+
+# class ValidJobPost(TestCase):
+#     def test_for_valid_job_post(self):
+#         test1= JobPosting
+#         self.assertIn(test1.name, False)
