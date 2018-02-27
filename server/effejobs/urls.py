@@ -17,11 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from .core import views
 from .api import search
+from django.conf.urls import url
+from django.contrib.auth import views as auth_views
+from effejobs.core import views as core_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/search/', search.get),
     path('', views.home),
     path('search/', views.home), #All pages can be mapped to home as routing is done by react router
-    
+    url(r'^$', core_views.home, name='home'),
+    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
+    url(r'^signup/$', core_views.signup, name='signup'),
 ]

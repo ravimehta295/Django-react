@@ -9,8 +9,5 @@ class OrganisationAdmin(admin.ModelAdmin):
     pass
 
 
-class UserAdmin(AdminSite):
-    pass
-
 admin.site.register(models.Organisation, OrganisationAdmin)
 admin.site.register(models.JobPosting)
