@@ -15,7 +15,7 @@ class Organisation(models.Model):
 
 class JobPosting(models.Model):
     name = models.CharField(max_length=100)
-    place = models.OneToOneField(
+    place = models.ForeignKey(
         Organisation,
         on_delete=models.CASCADE
     )

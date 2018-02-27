@@ -42,6 +42,15 @@
         }
 
     }
+    .searchbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .btn{
+            color: tomato;
+        }
+    }
     .header-image{
         height: 400px;
         width: 400px;

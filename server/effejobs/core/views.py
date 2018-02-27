@@ -1,9 +1,7 @@
 import json
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
-
+from .models import JobPosting
 from effejobs.core.forms import SignUpForm
 
 
@@ -31,3 +29,8 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+
+def searching(request, name,location):
+    jobs = JobPosting.objects.all()
+    print(jobs)

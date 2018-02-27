@@ -28,6 +28,15 @@ export default class Header extends Component {
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;term income through jobs.
 					</div>
 				</div>
+				<div className="searchbox">
+				<form method="post" id="form1" autocomplete="on">
+				<label> Job name
+					<input type="text" name="name"/></label>
+					<label> Location
+					<input type="text" name="location" /></label>
+				</form>
+				<button className="btn" type="submit" form="form1" value="Submit">Search</button>
+				</div>
 				<div className="header-image">
 				<img src={people}/>
 				</div>

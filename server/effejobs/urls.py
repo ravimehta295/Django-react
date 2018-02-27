@@ -20,6 +20,7 @@ from .api import search
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from effejobs.core import views as core_views
+from .core.views import searching
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +31,8 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
     url(r'^signup/$', core_views.signup, name='signup'),
+    url(r'^localhost:3000/name$', searching, name='search'),
 ]
+
+
+

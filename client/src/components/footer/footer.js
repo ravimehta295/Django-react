@@ -50,7 +50,7 @@ export default class Footer extends Component {
 			<div className = "h6-tag">Listen thousands of stories from our sucessful customers. We are proud to say that we have DONE IT! </div>
 			<div className="avatars">
 			<span className="avatar">
-			<img src={rectangle} alt="Image not found" width ="900px" height="300px"/>
+			<img src={rectangle} alt="Image not found" width ="90%" height="300px"/>
 			</span>
 			<span className="avatar-class" >
 			<img src={sri} alt="Image not found" width ="300px" height="300px"/>
