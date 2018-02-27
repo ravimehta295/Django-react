@@ -18,9 +18,6 @@ const route = (
 	  <Switch>
 	    <Route exact path="/" component={Home}/>
 	    <Route exact path="/search" component={Search}/>
-			<Route exact path="/login" />
-			<Route exact path="/signup"/>
-			<Route exact path="/logout" />
 	   </Switch>
 	 </div>
 	</Router>
