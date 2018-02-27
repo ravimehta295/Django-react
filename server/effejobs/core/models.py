@@ -9,7 +9,8 @@ from django.dispatch import receiver
 class Organisation(models.Model):
     name = models.CharField(max_length=127)
     desc = models.CharField(max_length=127)
-    location = models.CharField(max_length=127)
+    LOCATION_CHOICE=(('Banglalore','Bangalore'),('Pune','Pune'),('Noida','Noida'),('Hydrabad','Hydrabad'))
+    location = models.CharField(max_length=127,choices=LOCATION_CHOICE)
 
 
 class JobPosting(models.Model):

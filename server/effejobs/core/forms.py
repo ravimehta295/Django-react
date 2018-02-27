@@ -4,8 +4,12 @@ from django.contrib.auth.models import User
 
 
 class SignUpForm(UserCreationForm):
-    birth_date = forms.DateField(help_text='Required. Format: YYYY-MM-DD')
+    email = forms.CharField(max_length=100)
+    telephone = forms.IntegerField()
+    LOCATION_CHOICE = (('Banglalore', 'Bangalore'),
+                       ('Pune', 'Pune'), ('Noida', 'Noida'), ('Hydrabad', 'Hydrabad'))
+    location = forms.ChoiceField(choices=LOCATION_CHOICE)
 
     class Meta:
         model = User
-        fields = ('username', 'birth_date', 'password1', 'password2', )
+        fields = ('username', 'email', 'password1', 'password2', 'telephone', 'location',)
